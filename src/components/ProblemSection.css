@@ -1,0 +1,37 @@
+.problem-section {
+  background-color: var(--bg-white);
+}
+
+.badge-dot-red {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--danger);
+  border-radius: 50%;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .problem-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.problem-card {
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  /* The design has a very subtle pinkish hue for the cards */
+  background: linear-gradient(180deg, #ffffff 0%, #fffcfc 100%);
+}
+
+.red-icon-bg {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}

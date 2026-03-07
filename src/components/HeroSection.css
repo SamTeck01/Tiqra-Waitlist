@@ -1,0 +1,53 @@
+.hero {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.launch-tag {
+    background-color: #f1f5f9;
+    /* Slate 100 */
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+.hero-subtitle {
+    margin-bottom: 2.5rem;
+}
+
+.hero-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+}

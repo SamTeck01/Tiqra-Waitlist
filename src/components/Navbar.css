@@ -1,0 +1,29 @@
+.navbar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.02em;
+}
+
+.logo-icon {
+    display: block;
+}
+
+.navbar-actions .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+}
