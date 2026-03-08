@@ -20,7 +20,7 @@ function App() {
       <Navbar onOpenModal={openModal} />
       <HeroSection onOpenModal={openModal} />
       <ProblemSection />
-      <SolutionSection />
+      <SolutionSection onOpenModal={openModal} />
       <HowItWorksSection onOpenModal={openModal} />
       <BenefitsSection />
       <Footer />

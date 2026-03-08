@@ -1,46 +1,54 @@
 import React from 'react';
 import './SolutionSection.css';
-import { Target01Icon, AnalyticsUpIcon, Tick02Icon } from 'hugeicons-react';
+import { AiBrain01Icon, Shield01Icon, DocumentAttachmentIcon } from 'hugeicons-react';
 
-const SolutionSection = () => {
-    const solutions = [
-        {
-            icon: <Tick02Icon size={28} strokeWidth={1.5} />,
-            title: 'AI Feasibility Score',
-            description: 'Get an instant, data-driven score that evaluates market demand, bias, competitive risks, and overall feasibility for your startup idea.',
-        },
-        {
-            icon: <Target01Icon size={28} strokeWidth={1.5} />,
-            title: 'Bias-Free Validation',
-            description: 'Our algorithm automatically detects biased responses, filters out noise, and only delivers true insight you can actually trust to guide your decisions.',
-        },
-        {
-            icon: <AnalyticsUpIcon size={28} strokeWidth={1.5} />,
-            title: 'Actionable Insights',
-            description: 'Receive customized reports with precise recommendations, clear suggestions, and the exact steps you need to take to move forward.',
-        }
-    ];
-
+const SolutionSection = ({ onOpenModal }) => {
     return (
-        <section className="section-wrapper solution-section" id="solution">
+        <section className="section-wrapper solution-section">
             <div className="container">
                 <div className="section-header">
-                    <div className="pill-badge green">
-                        <span className="dot badge-dot-green"></span> THE SOLUTION
+                    <div className="pill-badge purple solution-badge">
+                        <span>The Solution</span>
                     </div>
                     <h2 className="section-title">TIQRA gives founders real market truth</h2>
                 </div>
 
                 <div className="solution-grid">
-                    {solutions.map((solution, index) => (
-                        <div key={index} className="feature-card solution-card">
-                            <div className="card-icon-wrapper green-icon-bg">
-                                {solution.icon}
-                            </div>
-                            <h3 className="card-title">{solution.title}</h3>
-                            <p className="card-desc">{solution.description}</p>
+                    <div className="feature-card solution-card">
+                        <div className="card-icon-wrapper green">
+                            <AiBrain01Icon size={24} />
                         </div>
-                    ))}
+                        <h3 className="card-title">AI Feasibility Score</h3>
+                        <p className="card-desc">
+                            Get an instant, unbiased feasibility score based on current market trends, competition, and user demand signals for your startup idea.
+                        </p>
+                    </div>
+
+                    <div className="feature-card solution-card">
+                        <div className="card-icon-wrapper green">
+                            <Shield01Icon size={24} />
+                        </div>
+                        <h3 className="card-title">Bias-Free Validation</h3>
+                        <p className="card-desc">
+                            Tiqra gets real, data-driven responses and eliminates bias responses so founders know the real potential of their idea.
+                        </p>
+                    </div>
+
+                    <div className="feature-card solution-card">
+                        <div className="card-icon-wrapper green">
+                            <DocumentAttachmentIcon size={24} />
+                        </div>
+                        <h3 className="card-title">Actionable Insights</h3>
+                        <p className="card-desc">
+                            Receive data-driven, brilliant recommendations to pivot your idea, find the right pathway back on the market.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="solution-cta text-center">
+                    <button className="btn-primary btn-full-pill" onClick={onOpenModal}>
+                        Start Validating Your Idea
+                    </button>
                 </div>
             </div>
         </section>

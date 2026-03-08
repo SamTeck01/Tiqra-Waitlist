@@ -1,44 +1,43 @@
 import React from 'react';
 import './Footer.css';
-import { NewTwitterIcon, Linkedin02Icon, Facebook02Icon } from 'hugeicons-react';
+import { NewTwitterIcon, Linkedin01Icon, Facebook01Icon } from 'hugeicons-react';
 
 const Footer = () => {
     return (
-        <footer className="footer-section">
+        <footer className="footer">
             <div className="container">
-                <div className="footer-grid">
-                    {/* Brand Column */}
-                    <div className="footer-brand-col">
-                        <h2 className="footer-logo">TIQRA</h2>
-                        <p className="footer-tagline">Validate your ideas instantly.</p>
+                <div className="footer-bg-text">TIQRA</div>
+                <div className="footer-content">
+                    <div className="footer-brand">
+                        <div className="footer-logo">
+                            Tiqra
+                        </div>
+                        <p className="footer-tagline">Truth-First Market Intelligence</p>
                     </div>
 
-                    {/* Products Column */}
-                    <div className="footer-links-col">
-                        <h4 className="footer-title">PRODUCTS</h4>
-                        <ul className="footer-links">
-                            <li><a href="#">Founders</a></li>
-                            <li><a href="#">Earners</a></li>
-                            <li><a href="#">Waitlist</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Socials Column */}
-                    <div className="footer-social-col">
-                        <h4 className="footer-title">SOCIALS</h4>
-                        <div className="social-icons">
-                            <a href="#" aria-label="X (Twitter)">
-                                <NewTwitterIcon size={24} variant="solid" />
-                            </a>
-                            <a href="#" aria-label="LinkedIn">
-                                <Linkedin02Icon size={24} variant="solid" />
-                            </a>
-                            <a href="#" aria-label="Facebook">
-                                <Facebook02Icon size={24} variant="solid" />
-                            </a>
+                    <div className="footer-links-grid">
+                        <div className="footer-group">
+                            <h4>PRODUCTS</h4>
+                            <a href="#">Features</a>
+                            <a href="#">How it works</a>
+                            <a href="#">Waitlist</a>
+                        </div>
+                        <div className="footer-group">
+                            <h4>LEGAL</h4>
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
                         </div>
                     </div>
+
+                    <div className="footer-social">
+                        <a href="#"><NewTwitterIcon size={20} /></a>
+                        <a href="#"><Linkedin01Icon size={20} /></a>
+                        <a href="#"><Facebook01Icon size={20} /></a>
+                    </div>
+                </div>
+
+                <div className="footer-bottom">
+                    <p>&copy; {new Date().getFullYear()} TIQRA. All rights reserved.</p>
                 </div>
             </div>
         </footer>

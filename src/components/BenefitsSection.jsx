@@ -1,46 +1,48 @@
 import React from 'react';
 import './BenefitsSection.css';
-import { AnalyticsUpIcon, TaskDaily01Icon, Rocket02Icon } from 'hugeicons-react';
+import { Rocket01Icon, Shield01Icon, ChartIcon } from 'hugeicons-react';
 
 const BenefitsSection = () => {
-    const benefits = [
-        {
-            icon: <AnalyticsUpIcon size={32} strokeWidth={1.5} />,
-            title: 'Validate Real Demand',
-            description: 'Know if people actually want your idea before you spend months building it.',
-        },
-        {
-            icon: <TaskDaily01Icon size={32} strokeWidth={1.5} />,
-            title: 'Eliminate Fake Feedback',
-            description: "Tiqra's AI algorithm detects numbers and screens out - honest validation responses.", // Text from UI
-        },
-        {
-            icon: <Rocket02Icon size={32} strokeWidth={1.5} />,
-            title: 'Get a Clear Go/No-Go Signal',
-            description: 'Receive an AI-generated feasibility score that tells you whether to build, pivot, or rethink.',
-        }
-    ];
-
     return (
-        <section className="section-wrapper benefits-section" id="benefits">
+        <section className="section-wrapper benefits-section">
             <div className="container">
-                <div className="section-header benefits-header">
+                <div className="section-header">
                     <div className="pill-badge purple">
-                        <span className="dot badge-dot-purple"></span> Our Benefit
+                        <span>Our Benefit</span>
                     </div>
                     <h2 className="section-title">Why Founders Use TIQRA</h2>
                 </div>
 
                 <div className="benefits-grid">
-                    {benefits.map((benefit, index) => (
-                        <div key={index} className="feature-card benefit-card">
-                            <div className="card-icon-wrapper purple-icon-bg">
-                                {benefit.icon}
-                            </div>
-                            <h3 className="card-title">{benefit.title}</h3>
-                            <p className="card-desc">{benefit.description}</p>
+                    <div className="feature-card benefit-card">
+                        <div className="benefit-icon">
+                            <Rocket01Icon size={32} />
                         </div>
-                    ))}
+                        <h3 className="card-title">Validate Real Demand</h3>
+                        <p className="card-desc">
+                            Know if people actually want part it to before you commitment to building it.
+                        </p>
+                    </div>
+
+                    <div className="feature-card benefit-card">
+                        <div className="benefit-icon">
+                            <Shield01Icon size={32} />
+                        </div>
+                        <h3 className="card-title">Eliminate Fake Feedback</h3>
+                        <p className="card-desc">
+                            Tiqra's Truth Layer detects random answers + bias responses.
+                        </p>
+                    </div>
+
+                    <div className="feature-card benefit-card">
+                        <div className="benefit-icon">
+                            <ChartIcon size={32} />
+                        </div>
+                        <h3 className="card-title">Get a Clear Go/No-Go Signal</h3>
+                        <p className="card-desc">
+                            Receive an AI-powered feasibility report that tells you whether to build, pivot or rethink.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

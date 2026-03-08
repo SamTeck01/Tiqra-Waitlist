@@ -1,0 +1,68 @@
+.who-it-is-for {
+    background-color: var(--bg-white);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.segments-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 4rem auto 0;
+}
+
+@media (min-width: 768px) {
+    .segments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .segments-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.segment-card {
+    background: #f8fafc;
+    border: 1px solid var(--border-light);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+.segment-card:hover {
+    background: white;
+    border-color: var(--primary-light);
+    box-shadow: 0 10px 15px -3px rgba(157, 78, 221, 0.1);
+    transform: translateY(-2px);
+}
+
+.segment-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.segment-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.segment-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}

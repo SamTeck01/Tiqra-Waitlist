@@ -1,24 +1,17 @@
 .solution-section {
-    /* background-color: var(--success-light); */
-    /* Following the design, it's a very light green strictly on the background */
-    background-color: #f6fdf9;
-    /* Softer light green */
+    background-color: var(--success-light);
+    /* Matching mockup green bg */
 }
 
-.badge-dot-green {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: var(--success-icon);
-    border-radius: 50%;
+.solution-badge {
+    margin-bottom: 2rem;
 }
 
 .solution-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
+    gap: 2rem;
+    margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -28,12 +21,31 @@
 }
 
 .solution-card {
-    border: 1px solid var(--border-light);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-    background: white;
+    text-align: left;
+    align-items: flex-start;
 }
 
-.green-icon-bg {
-    background-color: var(--success-light);
-    color: var(--success-icon);
+.card-icon-wrapper.green {
+    background-color: #f0fdf4;
+    color: var(--success);
+    border: 1px solid #dcfce7;
+}
+
+.solution-card .card-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.solution-card .card-desc {
+    font-size: 1rem;
+}
+
+.solution-cta {
+    margin-top: 4rem;
+}
+
+.solution-cta .btn-primary {
+    padding: 1rem 3.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
 }

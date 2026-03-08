@@ -1,21 +1,16 @@
 .problem-section {
-  background-color: var(--bg-white);
+  background-color: var(--danger-light);
+  /* Matching mockup pink/red bg */
 }
 
-.badge-dot-red {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background-color: var(--danger);
-  border-radius: 50%;
+.problem-badge {
+  margin-bottom: 2rem;
 }
 
 .problem-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -25,13 +20,21 @@
 }
 
 .problem-card {
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-  /* The design has a very subtle pinkish hue for the cards */
-  background: linear-gradient(180deg, #ffffff 0%, #fffcfc 100%);
+  text-align: left;
+  align-items: flex-start;
 }
 
-.red-icon-bg {
-  background-color: var(--danger-light);
+.card-icon-wrapper.red {
+  background-color: #fff1f2;
   color: var(--danger);
+  border: 1px solid #fee2e2;
+}
+
+.problem-card .card-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.problem-card .card-desc {
+  font-size: 1rem;
 }

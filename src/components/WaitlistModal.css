@@ -9,142 +9,68 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .modal-content {
     background: white;
     width: 100%;
     max-width: 440px;
-    border-radius: 1rem;
-    padding: 2.5rem 2rem;
+    border-radius: 2rem;
+    padding: 3rem 2.5rem;
     position: relative;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .modal-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: var(--text-muted);
+    top: 1.5rem;
+    right: 1.5rem;
+    color: var(--text-main);
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    transition: color 0.2s ease;
+    z-index: 20;
 }
 
-.modal-close:hover {
-    color: var(--text-main);
-}
-
-.waitlist-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-top: 0.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-}
-
-.form-group label {
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: var(--text-main);
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--border-light);
-    border-radius: 0.5rem;
-    font-family: inherit;
-    font-size: 0.875rem;
-    color: var(--text-main);
-    background-color: white;
-    transition: border-color 0.2s ease;
-}
-
-.form-group input::placeholder {
-    color: #9CA3AF;
-    /* Light gray placeholder */
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.1);
-}
-
-.select-wrapper {
-    position: relative;
-}
-
-.select-wrapper select {
-    appearance: none;
-    padding-right: 2.5rem;
-}
-
-/* Custom dropdown arrow using CSS */
-.select-wrapper::after {
-    content: "";
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0.75em;
-    height: 0.75em;
-    background-color: var(--text-muted);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    pointer-events: none;
-}
-
-.btn-submit {
-    width: 100%;
-    margin-top: 0.5rem;
-    border-radius: 0.5rem;
-    /* Less rounded for this specific button based on UI */
-    padding: 0.875rem;
-}
-
-/* Success State Styles */
 .success-state {
     text-align: center;
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.success-title {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--text-main);
-    margin-bottom: 2rem;
-}
-
-.success-icon-wrapper {
-    margin-bottom: 2rem;
-    background-color: var(--primary-light);
-    padding: 2rem;
-    border-radius: 1rem;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
-.success-message {
-    color: var(--text-muted);
-    font-size: 0.875rem;
+.success-header {
+    background: #f1f5f9;
+}
+
+.success-label {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-main);
     margin-bottom: 1.5rem;
 }
 
-.mt-6 {
-    margin-top: 1.5rem;
+.success-icon-container {
+    background-color: #f5f3ff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rocket-img {
+    width: 80px;
+    height: auto;
+}
+
+.success-message {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.modal-form-wrapper {
+    padding-top: 1rem;
 }
