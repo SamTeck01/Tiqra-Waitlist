@@ -15,8 +15,8 @@ function App() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  return (
-    <div className="app-wrapper">
+    return (
+      <div>
       <Navbar onOpenModal={openModal} />
       <HeroSection onOpenModal={openModal} />
       <ProblemSection />

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './WaitlistForm.css';
 
 const WaitlistForm = ({ onSuccess }) => {
     const [formData, setFormData] = useState({
@@ -62,9 +61,12 @@ const WaitlistForm = ({ onSuccess }) => {
     };
 
     return (
-        <form className="dynamic-waitlist-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlFor="fullName">Full name</label>
+        <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-full max-w-md mx-auto flex flex-col gap-4"
+        >
+            <div className="flex flex-col gap-1">
+                <label htmlFor="fullName" className="font-medium text-gray-700">Full name</label>
                 <input
                     type="text"
                     id="fullName"
@@ -73,11 +75,12 @@ const WaitlistForm = ({ onSuccess }) => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
+                    className="rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-gray-50"
                 />
             </div>
 
-            <div className="form-group">
-                <label htmlFor="email">Email address</label>
+            <div className="flex flex-col gap-1">
+                <label htmlFor="email" className="font-medium text-gray-700">Email address</label>
                 <input
                     type="email"
                     id="email"
@@ -86,52 +89,63 @@ const WaitlistForm = ({ onSuccess }) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-gray-50"
                 />
             </div>
 
-            <div className="form-group">
-                <label htmlFor="describeYou">What best describes you?</label>
-                <div className="select-wrapper">
-                    <select
-                        id="describeYou"
-                        name="describeYou"
-                        value={formData.describeYou}
-                        onChange={handleChange}
-                        required
-                    >
-                        <option value="" disabled hidden>Select an option</option>
-                        <option value="Founder / Startup Builder / Idea Holder">Founder / Startup Builder / Idea Holder</option>
-                        <option value="Product Manager">Product Manager</option>
-                        <option value="Student">Student</option>
-                        <option value="Professional">Professional</option>
-                        <option value="Just here to earn from surveys">Just here to earn from surveys</option>
-                    </select>
-                </div>
+            <div className="flex flex-col gap-1">
+                <label htmlFor="phone" className="font-medium text-gray-700">Phone number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Type your phone number"
+                    className="rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-gray-50"
+                    // value and onChange can be added if you want to collect phone
+                />
             </div>
 
-            <div className="form-group">
-                <label htmlFor="usePurpose">What would you use Tiqra for?</label>
-                <div className="select-wrapper">
-                    <select
-                        id="usePurpose"
-                        name="usePurpose"
-                        value={formData.usePurpose}
-                        onChange={handleChange}
-                        required
-                    >
-                        <option value="" disabled hidden>Select purpose</option>
-                        <option value="Validate a startup idea">Validate a startup idea</option>
-                        <option value="Earn money answering surveys">Earn money answering surveys</option>
-                        <option value="Conduct market research">Conduct market research</option>
-                        <option value="Just exploring">Just exploring</option>
-                    </select>
-                </div>
+            <div className="flex flex-col gap-1">
+                <label htmlFor="describeYou" className="font-medium text-gray-700">What best describe you?</label>
+                <select
+                    id="describeYou"
+                    name="describeYou"
+                    value={formData.describeYou}
+                    onChange={handleChange}
+                    required
+                    className="rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-gray-50"
+                >
+                    <option value="" disabled hidden>Select type</option>
+                    <option value="Founder / Startup Builder / Idea Holder">Founder / Startup Builder / Idea Holder</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="Student">Student</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Just here to earn from surveys">Just here to earn from surveys</option>
+                </select>
             </div>
 
-            <div className="form-group">
-                <label>Do you currently have a startup idea you want to validate?</label>
-                <div className="radio-group-horizontal">
-                    <label className="radio-label">
+            <div className="flex flex-col gap-1">
+                <label htmlFor="usePurpose" className="font-medium text-gray-700">What would you use TIQRA for?</label>
+                <select
+                    id="usePurpose"
+                    name="usePurpose"
+                    value={formData.usePurpose}
+                    onChange={handleChange}
+                    required
+                    className="rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-gray-50"
+                >
+                    <option value="" disabled hidden>Select type</option>
+                    <option value="Validate a startup idea">Validate a startup idea</option>
+                    <option value="Earn money answering surveys">Earn money answering surveys</option>
+                    <option value="Conduct market research">Conduct market research</option>
+                    <option value="Just exploring">Just exploring</option>
+                </select>
+            </div>
+
+            <div className="flex flex-col gap-1">
+                <label className="font-medium text-gray-700">Do you currently have a startup idea you want to validate</label>
+                <div className="flex gap-6 mt-1">
+                    <label className="flex items-center gap-2 cursor-pointer">
                         <input
                             type="radio"
                             name="hasIdea"
@@ -139,25 +153,27 @@ const WaitlistForm = ({ onSuccess }) => {
                             checked={formData.hasIdea === 'Yes'}
                             onChange={handleChange}
                             required
+                            className="accent-purple-500 w-4 h-4"
                         />
-                        <span>Yes</span>
+                        <span className="text-gray-700">Yes</span>
                     </label>
-                    <label className="radio-label">
+                    <label className="flex items-center gap-2 cursor-pointer">
                         <input
                             type="radio"
                             name="hasIdea"
                             value="No"
                             checked={formData.hasIdea === 'No'}
                             onChange={handleChange}
+                            className="accent-purple-500 w-4 h-4"
                         />
-                        <span>No</span>
+                        <span className="text-gray-700">No</span>
                     </label>
                 </div>
             </div>
 
             {formData.hasIdea === 'Yes' && (
-                <div className="form-group fade-in">
-                    <label htmlFor="ideaDescription">Briefly describe your idea</label>
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="ideaDescription" className="font-medium text-gray-700">Briefly describe your idea</label>
                     <textarea
                         id="ideaDescription"
                         name="ideaDescription"
@@ -165,14 +181,19 @@ const WaitlistForm = ({ onSuccess }) => {
                         value={formData.ideaDescription}
                         onChange={handleChange}
                         required
+                        className="rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-gray-50 min-h-[80px]"
                     ></textarea>
                 </div>
             )}
 
-            {error && <p className="error-message">{error}</p>}
+            {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
 
-            <button type="submit" className="btn-primary btn-submit-full" disabled={isSubmitting}>
-                {isSubmitting ? 'Submitting...' : 'Submit'}
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className="mt-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg py-3 w-full transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+                {isSubmitting ? 'Submitting...' : 'Join The Waitlist'}
             </button>
         </form>
     );

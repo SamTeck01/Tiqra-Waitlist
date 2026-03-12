@@ -1,5 +1,4 @@
 import React from 'react';
-import './WhoItIsFor.css';
 import { Rocket01Icon, CodeIcon, Briefcase02Icon, UserGroupIcon, Coins01Icon } from 'hugeicons-react';
 
 const WhoItIsFor = () => {
@@ -32,19 +31,19 @@ const WhoItIsFor = () => {
     ];
 
     return (
-        <section className="section-wrapper who-it-is-for container" id="target">
-            <div className="section-header text-center">
-                <h2 className="section-title">Who Tiqra Is For</h2>
-                <p className="section-subtitle">This helps visitors quickly identify themselves.</p>
+        <section id="target">
+            <div>
+                <h2>Who Tiqra Is For</h2>
+                <p>This helps visitors quickly identify themselves.</p>
             </div>
 
-            <div className="segments-grid">
+            <div>
                 {segments.map((segment, index) => (
-                    <div key={index} className="segment-card">
-                        <div className="segment-icon">{segment.icon}</div>
-                        <div className="segment-text">
-                            <h3 className="segment-title">{segment.title}</h3>
-                            <p className="segment-desc">{segment.desc}</p>
+                    <div key={index}>
+                        <div>{segment.icon}</div>
+                        <div>
+                            <h3>{segment.title}</h3>
+                            <p>{segment.desc}</p>
                         </div>
                     </div>
                 ))}
