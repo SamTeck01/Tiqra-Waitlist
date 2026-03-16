@@ -3,7 +3,7 @@ import { Note01Icon, UserGroupIcon, DashboardCircleIcon, ArrowRight01Icon, Arrow
 
 const HowItWorksSection = ({ onOpenModal }) => {
     return (
-        <section className="flex items-center justify-center mt-10 bg-white p-16">
+        <section className="flex items-center justify-center mt-6 -md:mt-10 bg-white p-16">
             <div className="w-full flex flex-col items-center justify-center text-center">
                 <div>
                     <div className="text-purple-500 font-bold p-3 rounded-full mb-4 bg-purple-100 w-fit mx-auto flex items-center gap-2">

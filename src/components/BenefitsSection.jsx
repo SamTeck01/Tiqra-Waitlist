@@ -15,7 +15,7 @@ const BenefitsSection = () => {
 
                 <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full">
                     {/* Benefit 1 */}
-                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-sm p-6 sm:p-8 w-full md:w-80 border border-gray-100 mb-4 md:mb-0">
+                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 w-full md:w-80 border border-gray-100 mb-4 md:mb-0">
                         <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-purple-400 mb-4">
                             <Rocket01Icon size={36} className="text-purple-500" />
                         </div>
@@ -24,7 +24,7 @@ const BenefitsSection = () => {
                     </div>
 
                     {/* Benefit 2 */}
-                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-sm p-6 sm:p-8 w-full md:w-80 border border-gray-100 mb-4 md:mb-0">
+                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 w-full md:w-80 border border-gray-100 mb-4 md:mb-0">
                         <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-purple-400 mb-4">
                             <Shield01Icon size={36} className="text-purple-500" />
                         </div>
@@ -33,7 +33,7 @@ const BenefitsSection = () => {
                     </div>
 
                     {/* Benefit 3 */}
-                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-sm p-6 sm:p-8 w-full md:w-80 border border-gray-100">
+                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 w-full md:w-80 border border-gray-100">
                         <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-purple-400 mb-4">
                             <ChartIcon size={36} className="text-purple-500" />
                         </div>
