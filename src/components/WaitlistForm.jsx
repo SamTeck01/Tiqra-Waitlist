@@ -63,7 +63,6 @@ const WaitlistForm = ({ onSuccess }) => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-full max-w-md mx-auto flex flex-col gap-4"
         >
             <div className="flex flex-col gap-1">
                 <label htmlFor="fullName" className="font-medium text-gray-700">Full name</label>
