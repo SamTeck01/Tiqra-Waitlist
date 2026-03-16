@@ -3,7 +3,7 @@ import { Alert01Icon, ZapIcon, UserMultipleIcon } from 'hugeicons-react';
 
 const ProblemSection = () => {
     return (
-        <section className="flex items-center justify-center mt-10 bg-red-300/10 p-20">
+        <section className="flex items-center justify-center mt-10 bg-red-300/10 py-10 px-5 md:p-20">
             <div className="w-full flex flex-col items-center justify-center text-center">
                 <div>
                     <div className="text-red-500 font-bold p-3 rounded-full mb-4 border border-red-200 w-fit mx-auto">
