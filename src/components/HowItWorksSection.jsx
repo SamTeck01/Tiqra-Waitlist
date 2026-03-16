@@ -15,7 +15,7 @@ const HowItWorksSection = ({ onOpenModal }) => {
 
                 <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-2/3">
                     {/* Step 1 */}
-                    <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white border border-gray-100 shadow-xl">
+                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-full md:w-80 border border-gray-100">
                         <div className="flex items-center justify-center w-20 h-20 rounded-full border-2 border-purple-400 mb-4">
                             <Note01Icon size={40} className="text-purple-500" />
                         </div>
@@ -33,7 +33,7 @@ const HowItWorksSection = ({ onOpenModal }) => {
                     </div>
 
                     {/* Step 2 */}
-                    <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white border border-gray-100 shadow-xl">
+                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-full md:w-80 border border-gray-100">
                         <div className="flex items-center justify-center w-20 h-20 rounded-full border-2 border-purple-400 mb-4">
                             <UserGroupIcon size={40} className="text-purple-500" />
                         </div>
@@ -51,7 +51,7 @@ const HowItWorksSection = ({ onOpenModal }) => {
                     </div>
 
                     {/* Step 3 */}
-                    <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white border border-gray-100 shadow-xl">
+                    <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-full md:w-80 border border-gray-100">
                         <div className="flex items-center justify-center w-20 h-20 rounded-full border-2 border-purple-400 mb-4">
                             <DashboardCircleIcon size={40} className="text-purple-500" />
                         </div>
