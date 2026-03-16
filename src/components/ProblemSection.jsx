@@ -15,7 +15,7 @@ const ProblemSection = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full md:w-2/3">
+                <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full">
                     <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white border border-red-800/10 shadow-lg">
                         <div className="text-red-500 my-2 bg-red-300/10 p-3 rounded-full">
                             <Alert01Icon size={24} />

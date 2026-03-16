@@ -13,7 +13,7 @@ const HowItWorksSection = ({ onOpenModal }) => {
                     <h2 className="text-3xl font-bold my-4">Validate Your Idea in 3 Simple Steps</h2>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full md:w-2/3">
+                <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full">
                     {/* Step 1 */}
                     <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-full md:w-80 border border-gray-100">
                         <div className="flex items-center justify-center w-20 h-20 rounded-full border-2 border-purple-400 mb-4">

@@ -15,7 +15,7 @@ const SolutionSection = ({ onOpenModal }) => {
                     </p>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full md:w-2/3">
+                <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full">
                     <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white border border-green-800/10 shadow-lg">
                         <div className="text-green-500 my-2 bg-green-300/10 p-3 rounded-full">
                             <AiBrain01Icon size={24} />
