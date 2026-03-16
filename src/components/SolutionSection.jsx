@@ -3,13 +3,13 @@ import { AiBrain01Icon, Shield01Icon, DocumentAttachmentIcon } from 'hugeicons-r
 
 const SolutionSection = ({ onOpenModal }) => {
     return (
-        <section className="flex items-center justify-center bg-green-300/10 p-16">
+        <section className="flex items-center justify-center bg-green-300/10 px-5 py-10 md:p-16">
             <div className="w-full flex flex-col items-center justify-center text-center">
                 <div>
                     <div className="text-green-500 font-bold p-3 rounded-full mb-4 border border-green-200 w-fit mx-auto">
                         <span>🟢 The Solution</span>
                     </div>
-                    <h2 className="text-4xl font-bold my-4 sm:text-3xl">TIQRA gives founders real market truth</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold my-4">TIQRA gives founders real market truth</h2>
                     <p className="text-gray-500 text-lg sm:text-base">
                         Validate your idea with real users, eliminate bias, and get actionable insights before you build.
                     </p>

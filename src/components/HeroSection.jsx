@@ -13,7 +13,7 @@ const HeroSection = ({ onOpenModal }) => {
                     <span className="text-sm sm:text-sm font-semibold bg-purple-400 px-4 py-2 rounded-full mt-2 text-white">Launching soon</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight sm:leading-tight md:leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight sm:leading-tight md:leading-tight">
                     Stop Building Startups<br className="hidden sm:block"/> Nobody Wants
                 </h1>
 

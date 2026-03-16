@@ -3,14 +3,14 @@ import { Note01Icon, UserGroupIcon, DashboardCircleIcon, ArrowRight01Icon, Arrow
 
 const HowItWorksSection = ({ onOpenModal }) => {
     return (
-        <section className="flex items-center justify-center mt-6 -md:mt-10 bg-white p-16">
+        <section className="flex items-center justify-center mt-6 -md:mt-10 bg-white py-10 px-5 md:p-16">
             <div className="w-full flex flex-col items-center justify-center text-center">
                 <div>
                     <div className="text-purple-500 font-bold p-3 rounded-full mb-4 bg-purple-100 w-fit mx-auto flex items-center gap-2">
                         <span className="w-2 h-2 bg-purple-400 rounded-full inline-block"></span>
                         <span>How it works</span>
                     </div>
-                    <h2 className="text-4xl font-bold my-4 sm:text-3xl">Validate Your Idea in 3 Simple Steps</h2>
+                    <h2 className="text-3xl font-bold my-4">Validate Your Idea in 3 Simple Steps</h2>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full md:w-2/3">

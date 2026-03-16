@@ -9,7 +9,7 @@ const ProblemSection = () => {
                     <div className="text-red-500 font-bold p-3 rounded-full mb-4 border border-red-200 w-fit mx-auto">
                         <span> 🔴The Problem</span>
                     </div>
-                    <h2 className="text-4xl font-bold my-4 sm:text-3xl">Most Founders Fail Before They Even Start</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold my-4">Most Founders Fail Before They Even Start</h2>
                     <p className="text-gray-500 text-lg sm:text-base">
                         There are gray areas in building that even work with just 1 percent of it team happening.
                     </p>
