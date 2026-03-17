@@ -22,16 +22,16 @@ const WaitlistModal = ({ onClose }) => {
                     </div>
                 ) : (
                     <div className="flex flex-col items-center text-center p-6 sm:p-8">
-                        <div className="w-full bg-purple-50 py-4 rounded-t-2xl mb-4">
-                            <h2 className="text-xl font-bold text-gray-800 mb-1">Congratulations!</h2>
+                        <div className="w-full bg-purple-200 py-4 rounded-2xl mb-4 mt-6 md:mt-4">
+                            <h2 className="text-2xl font-bold text-gray-800 mb-1">Congratulations!</h2>
                             <p className="text-gray-700 text-base">Successfully&nbsp; joined the waitlist</p>
+
+                            <img
+                                src="rocket-success.png"
+                                alt="Success"
+                                className="w-40 h-40 mx-auto mt-6"
+                            />
                         </div>
-                        <img
-                            src="/images/rocket-success.svg"
-                            alt="Success"
-                            className="w-28 h-28 mx-auto my-2"
-                        />
-                        <div className="w-full border-t border-gray-200 my-4"></div>
                         <a href="#" className="text-sm text-purple-600 hover:underline mb-6">Invite friends to move up the waitlist</a>
                         <button
                             onClick={onClose}

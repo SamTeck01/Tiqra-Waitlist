@@ -8,7 +8,7 @@ const HeroSection = ({ onOpenModal }) => {
                 <div className="flex flex-col items-center gap-2 mb-4">
                     <p className="flex items-center gap-2 text-xs sm:text-sm md:text-base font-medium text-purple-600 border border-purple-200 rounded-full px-4 py-2 sm:px-6 sm:py-3">
                         <SparklesIcon size={20} variant="solid" />
-                        AI Powered Startup Validation
+                        User Response Powered Startup Validation
                     </p>
                     <span className="text-sm sm:text-sm font-semibold bg-purple-400 px-4 py-2 rounded-full mt-2 text-white">Launching soon</span>
                 </div>
