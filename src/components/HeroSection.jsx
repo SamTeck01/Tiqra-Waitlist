@@ -4,7 +4,7 @@ import { SparklesIcon } from 'hugeicons-react';
 const HeroSection = ({ onOpenModal }) => {
     return (
         <section className="flex items-center justify-center mt-10 md:mt-20 px-4 sm:px-8 lg:px-0">
-            <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center">
+            <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center mt-6">
                 <div className="flex flex-col items-center gap-2 mb-4">
                     <p className="flex items-center gap-2 text-xs sm:text-sm md:text-base font-medium text-purple-600 border border-purple-200 rounded-full px-4 py-2 sm:px-6 sm:py-3">
                         <SparklesIcon size={20} variant="solid" />
@@ -21,7 +21,7 @@ const HeroSection = ({ onOpenModal }) => {
                     Tiqra helps founders validate startup ideas with real users, their crazy responses, and get an AI-powered feasibility score before building.
                 </p>
 
-                <div className="mt-6 mb-6">
+                <div className="mt-8 mb-6">
                     <button className="bg-purple-600 text-white px-6 py-3 sm:px-6 sm:py-3 rounded-xl hover:bg-purple-500 text-base sm:text-sm font-semibold transition" onClick={onOpenModal}>
                         Get Early Access
                     </button>
