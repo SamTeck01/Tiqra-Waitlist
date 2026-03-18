@@ -10,18 +10,18 @@ const HeroSection = ({ onOpenModal }) => {
                         <SparklesIcon size={20} variant="solid" />
                         User Response Powered Startup Validation
                     </p>
-                    <span className="text-sm sm:text-sm font-semibold bg-purple-400 px-4 py-2 rounded-full mt-2 text-white">Launching soon</span>
+                    <span className="text-sm sm:text-sm font-semibold bg-purple-400 px-4 py-2 rounded-full mt-6 md:mt-2 text-white">Launching soon</span>
                 </div>
 
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight sm:leading-tight md:leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight sm:leading-tight md:leading-tight mt-6 md:mt-2">
                     Stop Building Startups<br className="hidden sm:block"/> Nobody Wants
                 </h1>
 
-                <p className="max-w-md sm:max-w-xl mb-6 text-gray-500 text-sm sm:text-base md:text-lg">
+                <p className="max-w-md sm:max-w-xl mb-10 text-gray-500 text-sm sm:text-base md:text-lg">
                     Tiqra helps founders validate startup ideas with real users, their crazy responses, and get an AI-powered feasibility score before building.
                 </p>
 
-                <div>
+                <div className="mt-6 mb-6">
                     <button className="bg-purple-600 text-white px-6 py-3 sm:px-6 sm:py-3 rounded-xl hover:bg-purple-500 text-base sm:text-sm font-semibold transition" onClick={onOpenModal}>
                         Get Early Access
                     </button>
