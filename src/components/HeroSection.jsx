@@ -3,7 +3,7 @@ import { SparklesIcon } from 'hugeicons-react';
 
 const HeroSection = ({ onOpenModal }) => {
     return (
-        <section className="flex items-center justify-center mt-10 md:mt-20 px-4 sm:px-8 lg:px-0 h-screen">
+        <section className="flex items-center justify-center mt-10 md:mt-20 px-4 sm:px-8 lg:px-0">
             <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center">
                 <div className="flex flex-col items-center gap-2 mb-4">
                     <p className="flex items-center gap-2 text-xs sm:text-sm md:text-base font-medium text-purple-600 border border-purple-200 rounded-full px-4 py-2 sm:px-6 sm:py-3">
