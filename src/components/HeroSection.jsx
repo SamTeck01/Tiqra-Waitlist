@@ -17,8 +17,8 @@ const HeroSection = ({ onOpenModal }) => {
                     Stop Building Startups<br className="hidden sm:block"/> Nobody Wants
                 </h1>
 
-                <p className="max-w-md sm:max-w-xl mb-10 text-gray-500 text-sm sm:text-base md:text-lg">
-                    Tiqra helps founders validate startup ideas with real users and get <br></br><span>Ai-powered feasibility score before building.</span> 
+                <p className="max-w-md sm:max-w-xl mb-10 text-gray-500 text-base md:text-md">
+                    Tiqra helps founders validate startup ideas with real users and get Ai-powered feasibility score before building.
                 </p>
 
                 <div className="mt-8 mb-6">
