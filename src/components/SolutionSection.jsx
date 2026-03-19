@@ -9,7 +9,7 @@ const SolutionSection = ({ onOpenModal }) => {
                     <div className="text-green-500 font-bold p-3 rounded-full mb-4 border border-green-200 w-fit mx-auto">
                         <span>🟢 The Solution</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold my-4">TIQRA gives founders real market truth</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold my-4">Tiqra gives founders real market truth</h2>
                     <p className="text-gray-500 text-lg sm:text-base">
                         Validate your idea with real users, eliminate bias, and get actionable insights before you build.
                     </p>

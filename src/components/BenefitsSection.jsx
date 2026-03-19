@@ -10,7 +10,7 @@ const BenefitsSection = () => {
                         <span className="w-2 h-2 bg-purple-400 rounded-full inline-block"></span>
                         <span>Our Benefit</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold my-4">Why Founders Use TIQRA</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold my-4">Why Founders Use Tiqra</h2>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mt-8 md:mt-12 w-full">

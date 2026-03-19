@@ -11,8 +11,8 @@ const Footer = () => {
             <div className="relative max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-8 z-10 w-full">
                 {/* Brand */}
                 <div className="flex-1 min-w-[120px] sm:min-w-[140px] md:min-w-[180px] mb-4 sm:mb-0">
-                    <div className="text-lg sm:text-xl md:text-2xl font-bold mb-2">TIQRA</div>
-                    <div className="text-xs sm:text-sm">Build faster. Launch smarter.</div>
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Tiqra</div>
+                    <div className="text-xs sm:text-sm">Validate Smarter. Build Faster. Launch with confidence.</div>
                 </div>
 
                 {/* Products */}
