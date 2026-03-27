@@ -124,7 +124,7 @@ const WaitlistForm = ({ onSuccess }) => {
             </div>
 
             <div className="flex flex-col gap-1">
-                <label htmlFor="usePurpose" className="font-medium text-gray-700">What would you use TIQRA for?</label>
+                <label htmlFor="usePurpose" className="font-medium text-gray-700">What would you use Tiqra for?</label>
                 <select
                     id="usePurpose"
                     name="usePurpose"
