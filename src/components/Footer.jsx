@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="relative bg-purple-500 text-white pt-10 sm:pt-12 pb-4 sm:pb-6 px-2 sm:px-4 md:px-8 overflow-hidden">
             {/* Large faded background text */}
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none select-none">
-                <span className="text-[48px] xs:text-[80px] sm:text-[120px] md:text-[180px] lg:text-[220px] font-extrabold text-purple-400 opacity-20 leading-none tracking-tighter">TIQRA</span>
+                <span className="text-[48px] xs:text-[80px] sm:text-[120px] md:text-[180px] lg:text-[220px] font-extrabold text-purple-400 opacity-20 leading-none tracking-tighter">Tiqra</span>
             </div>
             <div className="relative max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-8 z-10 w-full">
                 {/* Brand */}
