@@ -26,7 +26,7 @@ export default function MobileBottomNav() {
   const { user } = useAuthStore();
 
   // Don't show on auth pages
-  if (pathname.startsWith("/auth") || pathname === "/splash" || pathname === "/onboarding") {
+  if (pathname.startsWith("/auth") || pathname === "/splash" || pathname === "/onboarding" || pathname === "/landing") {
     return null;
   }
 
