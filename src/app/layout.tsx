@@ -1,22 +1,21 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import MobileBottomNav from "@/components/layout/MobileBottomNav";
-import AuthProvider from "@/components/auth/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "Tiqra – Truth-First Market Intelligence",
+  title: "Tiqra – Validate your idea before building it",
   description:
-    "Validate your startup idea with real human feedback. Tiqra gives founders signal-based insights to Proceed, Pivot, or Kill – before investing a naira.",
-  keywords: ["startup validation", "market research", "Nigeria", "founder tools"],
+    "AI-powered validation using real human insights, helping you make smarter decisions without the guesswork. Join 200+ founders on Tiqra.",
+  keywords: ["startup validation", "market research", "founder tools", "customer discovery"],
   openGraph: {
-    title: "Tiqra – Truth-First Market Intelligence",
-    description: "Validate your startup idea with verified human feedback.",
+    title: "Tiqra – Validate your idea before building it",
+    description:
+      "AI-powered validation using real human insights, helping you make smarter decisions without the guesswork.",
     type: "website",
   },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -30,10 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.variable}>
       <body className={`antialiased ${GeistSans.className}`}>
-        <AuthProvider>
-          {children}
-          <MobileBottomNav />
-        </AuthProvider>
+        {children}
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-/* Geist font is loaded via the 'geist' package in layout.tsx (next/font — no network request) */
+/* Geist font is loaded via the 'geist' package in layout.tsx (next/font) */
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +13,6 @@
     --text-primary: #111827;
     --text-secondary: #6B7280;
     --border: #E5E7EB;
-    --sidebar-width: 324px;
   }
 
   * {
@@ -21,7 +20,7 @@
   }
 
   html {
-    @apply antialiased;
+    @apply antialiased scroll-smooth;
   }
 
   body {
@@ -34,280 +33,22 @@
   }
 }
 
-@layer components {
-  /* Sidebar */
-  .tiqra-sidebar {
-    @apply w-[324px] min-h-screen bg-brand-primary flex flex-col shadow-sidebar fixed top-0 left-0 z-40;
-  }
-
-  .sidebar-nav-item {
-    @apply flex items-center gap-2.5 px-6 py-4 text-white/80 text-lg font-normal transition-all duration-200 cursor-pointer;
-  }
-
-  .sidebar-nav-item:hover {
-    @apply bg-white/10 text-white;
-  }
-
-  .sidebar-nav-item.active {
-    @apply bg-white/20 text-white border-r-[3px] border-[#EDE9FE];
-  }
-
-  /* Main content area */
-  .tiqra-main {
-    @apply lg:ml-[324px] min-h-screen bg-[#FEFEFE] flex flex-col pb-24 lg:pb-0;
-  }
-
-  /* Top bar */
-  .tiqra-topbar {
-    @apply flex items-center justify-between px-8 py-5 border-b border-[#F3F4F6] bg-[#FEFEFE];
-  }
-
-  /* Cards */
-  .tiqra-card {
-    @apply bg-white rounded-[30px] border border-[#F3F4F6] p-6;
-  }
-
-  .tiqra-card-sm {
-    @apply bg-white rounded-xl border border-[#F3F4F6] p-5;
-  }
-
-  /* Buttons */
-  .btn-primary {
-    @apply inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-xl text-lg font-normal transition-all duration-200 hover:bg-brand-secondary active:scale-[0.98] cursor-pointer;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center gap-2 bg-white text-[#111827] border border-[#E5E7EB] px-6 py-3 rounded-xl text-lg font-normal transition-all duration-200 hover:bg-[#F8F9FC] active:scale-[0.98] cursor-pointer;
-  }
-
-  .btn-ghost {
-    @apply inline-flex items-center gap-2 text-brand-primary px-4 py-2 rounded-lg text-body font-normal transition-colors hover:bg-[#EDE9FE] cursor-pointer;
-  }
-
-  /* Inputs */
-  .tiqra-input {
-    @apply w-full bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-body text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all;
-  }
-
-  .tiqra-textarea {
-    @apply w-full bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-body text-[#111827] placeholder:text-[#9CA3AF] focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all resize-none;
-  }
-
-  /* Labels */
-  .tiqra-label {
-    @apply block text-body font-semibold text-[#111827] mb-2;
-  }
-
-  /* Step indicator */
-  .step-dot {
-    @apply w-12 h-12 rounded-full flex items-center justify-center text-h3 font-semibold border-2 transition-all;
-  }
-
-  .step-dot.active {
-    @apply bg-[#FEFEFE] border-brand-primary text-[#111827];
-  }
-
-  .step-dot.completed {
-    @apply bg-brand-primary border-brand-primary text-white;
-  }
-
-  .step-dot.inactive {
-    @apply bg-[#F8F9FC] border-[#F8F9FC] text-[#6B7280];
-  }
-
-  .step-line {
-    @apply h-px flex-1 bg-[#E5E7EB];
-  }
-
-  .step-line.completed {
-    @apply bg-brand-primary;
-  }
-
-  /* Survey cards */
-  .survey-card {
-    @apply bg-white rounded-2xl border border-[#F3F4F6] p-5 hover:shadow-card-hover transition-all cursor-pointer flex flex-col gap-4;
-  }
-
-  /* Tag / chip */
-  .tiqra-tag {
-    @apply inline-flex items-center gap-1 px-3 py-1 bg-[#EDE9FE] text-brand-primary rounded-full text-sm font-medium;
-  }
-
-  /* Section heading */
-  .tiqra-section-title {
-    @apply text-[24px] font-semibold text-text-primary leading-tight;
-  }
-
-  /* Status badges */
-  .badge-live {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-[#DCFCE7] text-[#16A34A] rounded-full text-sm font-medium;
-  }
-
-  .badge-draft {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-[#F3F4F6] text-[#6B7280] rounded-full text-sm font-medium;
-  }
-
-  .badge-completed {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-[#EDE9FE] text-brand-primary rounded-full text-sm font-medium;
-  }
-
-  /* Progress bar */
-  .progress-bar {
-    @apply h-3 rounded-full bg-[#EDE9FE] overflow-hidden;
-  }
-
-  .progress-fill {
-    @apply h-full bg-brand-primary rounded-full transition-all duration-500;
-  }
-
-  /* Verdict cards */
-  .verdict-proceed {
-    @apply border-[#16A34A] bg-[#DCFCE7] text-[#16A34A];
-  }
-
-  .verdict-pivot {
-    @apply border-[#D97706] bg-[#FEF3C7] text-[#D97706];
-  }
-
-  .verdict-kill {
-    @apply border-[#DC2626] bg-[#FEE2E2] text-[#DC2626];
-  }
-
-  /* Scrollbar */
+@layer utilities {
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
-    @apply w-1.5;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#E5E7EB] rounded-full;
+    background: #E5E7EB;
+    border-radius: 9999px;
   }
 
-  /* Auth pages */
-  .auth-container {
-    @apply min-h-screen flex items-center justify-center bg-[#FEFEFE] p-4;
-  }
-
-  .auth-card {
-    @apply w-full max-w-md bg-white rounded-3xl border border-[#F3F4F6] p-8 shadow-card;
-  }
-
-  /* Spinner animation */
-  @keyframes tiqra-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .tiqra-spinner {
-    animation: tiqra-spin 1s linear infinite;
-  }
-
-  /* Processing progress */
-  .process-step {
-    @apply flex items-center gap-9 w-full;
-  }
-
-  .process-dot-done {
-    @apply w-[320px] h-3 bg-brand-primary rounded-full;
-  }
-
-  .process-dot-progress {
-    @apply relative w-[320px] h-3 bg-[#EDE9FE] rounded-full overflow-hidden;
-  }
-
-  .process-dot-pending {
-    @apply w-[320px] h-3 bg-[#EDE9FE] rounded-full;
-  }
-
-  /* Earner survey card */
-  .earner-survey-card {
-    @apply bg-white rounded-2xl border border-[#F3F4F6] p-5 flex flex-col gap-4 shadow-card hover:shadow-card-hover transition-all;
-  }
-
-  /* Wallet card */
-  .wallet-balance-card {
-    @apply bg-brand-primary rounded-xl p-6 flex flex-col gap-4;
-  }
-
-  /* Toggle switch */
-  .tiqra-toggle {
-    @apply relative w-12 h-6 rounded-full transition-colors cursor-pointer;
-  }
-
-  .tiqra-toggle-thumb {
-    @apply absolute top-1 w-4 h-4 rounded-full bg-white transition-transform shadow-sm;
-  }
-
-  /* Notification dot */
-  .notif-dot {
-    @apply absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#DC2626] border-2 border-white;
-  }
-
-  /* Empty state */
-  .empty-state {
-    @apply flex flex-col items-center justify-center py-20 gap-5 text-center;
-  }
-
-  /* Shimmer skeleton */
-  @keyframes shimmer {
-    0% { background-position: -468px 0; }
-    100% { background-position: 468px 0; }
-  }
-  .skeleton {
-    background: linear-gradient(90deg, #F3F4F6 25%, #E5E7EB 50%, #F3F4F6 75%);
-    background-size: 936px 100%;
-    animation: shimmer 1.4s infinite linear;
-    @apply rounded-xl;
-  }
-
-  /* Mobile bottom navigation */
-  .mobile-bottom-nav {
-    @apply fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-[#E5E7EB] flex items-center justify-around px-2 lg:hidden;
-    padding-bottom: env(safe-area-inset-bottom, 12px);
-    height: 72px;
-  }
-
-  .mobile-nav-item {
-    @apply flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all flex-1;
-  }
-
-  .mobile-nav-item.active {
-    @apply text-brand-primary;
-  }
-
-  .mobile-nav-item:not(.active) {
-    @apply text-[#9CA3AF];
-  }
-
-  /* Page top padding for mobile (accounts for hamburger) */
-  .mobile-page-header {
-    @apply pt-16 lg:pt-0;
-  }
-
-  /* Responsive tiqra-topbar */
-  .tiqra-topbar {
-    @apply flex items-center justify-between px-4 lg:px-8 py-4 lg:py-5 border-b border-[#F3F4F6] bg-[#FEFEFE];
-  }
-
-  /* Responsive card padding */
-  .tiqra-card {
-    @apply bg-white rounded-[20px] lg:rounded-[30px] border border-[#F3F4F6] p-4 lg:p-6;
-  }
-
-  /* Page content padding */
-  .page-content {
-    @apply px-4 lg:px-8 py-4 lg:py-8;
-  }
-
-  /* Hide scrollbar but allow scroll */
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D1D5DB;
   }
 }
