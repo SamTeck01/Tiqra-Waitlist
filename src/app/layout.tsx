@@ -1,16 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { GeistSans } from "geist/font/sans";
+import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
+
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Tiqra – Validate your idea before building it",
   description:
-    "AI-powered validation using real human insights, helping you make smarter decisions without the guesswork. Join 200+ founders on Tiqra.",
+    "AI-powered validation using real human insights, helping you make smarter decisions with confidence.",
   keywords: ["startup validation", "market research", "founder tools", "customer discovery"],
+  icons: { icon: "/landing/logo.png" },
   openGraph: {
     title: "Tiqra – Validate your idea before building it",
     description:
-      "AI-powered validation using real human insights, helping you make smarter decisions without the guesswork.",
+      "AI-powered validation using real human insights, helping you make smarter decisions with confidence.",
     type: "website",
   },
 };
@@ -18,7 +22,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -27,10 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={GeistSans.variable}>
-      <body className={`antialiased ${GeistSans.className}`}>
-        {children}
-      </body>
+    <html lang="en" className={`${manrope.variable} ${sora.variable}`}>
+      <body className="antialiased font-sans">{children}</body>
     </html>
   );
 }

@@ -1,85 +1,77 @@
-const steps = [
+const items = [
   {
-    number: "01",
+    n: "01",
     title: "Make decisions with real evidence.",
-    description:
-      "Instead of relying on assumptions, guesswork, or feedback from friends and family, Tiqra helps you gather meaningful signals from the people your idea is actually built for.",
+    body: "Instead of relying on assumptions, guesswork, or feedback from friends and family, Tiqra helps you gather meaningful signals from the people your idea is actually built for.",
+    // number offset (px) within the 343px-tall group, per Figma
+    numberTop: 0,
+    cardH: 193,
+    card: "bg-[#F8F9FC]",
+    number: "text-[#6B7280]",
   },
   {
-    number: "02",
+    n: "02",
     title: "Ask smarter questions.",
-    description:
-      "Tiqra\u2019s AI generates targeted questions designed around your idea, problem, and audience\u2014so you can focus on the insights that matter.",
+    body: "Tiqra's AI generates targeted questions designed around your idea, problem, and audience—so you can focus on the insights that matter.",
+    numberTop: 27,
+    cardH: 148,
+    card: "bg-[#E0E7FF]",
+    number: "text-[#6B7280]/60",
   },
   {
-    number: "03",
+    n: "03",
     title: "Turn feedback into clarity.",
-    description:
-      "Tiqra analyzes your responses to uncover demand, pain points, willingness to pay, objections, and important patterns. Use the evidence to understand whether you should GO, PIVOT, or KILL your idea.",
+    titleMaxW: 224,
+    body: "Tiqra analyzes your responses to uncover demand, pain points, willingness to pay, objections, and important patterns. Use the evidence to understand whether you should GO, PIVOT, or KILL your idea.",
+    numberTop: 0,
+    cardH: 193,
+    card: "bg-white",
+    number: "text-[#6B7280]",
   },
   {
-    number: "04",
+    n: "04",
     title: "Reach the right people.",
-    description:
-      "Get feedback from relevant respondents who can share genuine experiences, preferences, concerns, and opinions about your idea.",
+    body: "Get feedback from relevant respondents who can share genuine experiences, preferences, concerns, and opinions about your idea.",
+    numberTop: 51,
+    cardH: 148,
+    card: "bg-[#E0E7FF]",
+    number: "text-[#6B7280]/60",
   },
 ];
 
 export default function BuildWithEvidence() {
   return (
-    <section id="about-us" className="bg-white py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
-          <h2 className="text-3xl sm:text-[36px] font-semibold text-[#111827] mb-3 tracking-tight">
-            Build with evidence, not assumptions.
-          </h2>
-          <p className="text-[#6B7280] text-[15px] sm:text-base leading-relaxed max-w-[640px] mx-auto font-normal">
-            Tiqra combines AI-powered validation with real human insights to help you understand your
-            audience and make confident decisions before investing in your idea.
-          </p>
-        </div>
+    <section id="about" className="scroll-mt-8 bg-white px-4 py-16 md:px-[70px] md:py-[82px]">
+      <div className="mx-auto max-w-[726px] text-center">
+        <h2 className="text-[28px] font-semibold leading-[40px] tracking-[-1px] text-[#111827] md:text-[32px] md:leading-[48px]">
+          Build with evidence, not assumptions.
+        </h2>
+        <p className="mt-3 text-[16px] leading-[25px] tracking-[-0.4px] text-[#6B7280] md:text-[18px]">
+          Tiqra combines AI-powered validation with real human insights to help you understand your audience and make
+          confident decisions before investing in your idea.
+        </p>
+      </div>
 
-        {/* 4 Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {steps.map((step, i) => {
-            // Alternate card backgrounds: cards 1 & 3 are off-white, cards 2 & 4 are lavender
-            const isLavender = i % 2 === 1;
-            const cardBg = isLavender ? "bg-[#E1E7FF]" : "bg-[#F4F5F9]";
-
-            return (
-              <div
-                key={step.number}
-                className="relative flex flex-col"
-              >
-                {/* Big Arch Number (behind the card top) */}
-                <div className="relative flex items-end justify-center h-[110px] overflow-hidden select-none pointer-events-none">
-                  <span
-                    className="text-[120px] font-black leading-none tracking-tighter text-[#D5D7DC]"
-                    style={{ lineHeight: 0.85 }}
-                    aria-hidden="true"
-                  >
-                    {step.number}
-                  </span>
-                </div>
-
-                {/* Card Body */}
-                <div
-                  className={`relative ${cardBg} rounded-b-[28px] rounded-t-[28px] -mt-6 px-6 pt-8 pb-7 flex-1 flex flex-col`}
-                >
-                  <h3 className="text-[16px] font-semibold text-[#111827] mb-2.5 leading-snug text-center">
-                    {step.title}
-                  </h3>
-                  <p className="text-[13px] text-[#6B7280] leading-relaxed font-normal text-center">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+      <div className="mx-auto mt-[34px] grid max-w-[1300px] gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {items.map((it) => (
+          <div key={it.n} className="relative lg:h-[343px]">
+            <span
+              aria-hidden
+              className={`block text-center text-[120px] font-semibold leading-[180px] tracking-[3.6px] lg:absolute lg:inset-x-0 lg:text-[180px] lg:leading-[270px] ${it.number}`}
+              style={{ top: it.numberTop }}
+            >
+              {it.n}
+            </span>
+            <div
+              className={`relative z-10 -mt-[72px] rounded-3xl px-3 py-4 text-center lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:h-[var(--h)] ${it.card}`}
+              style={{ ["--h" as string]: `${it.cardH}px` }}
+            >
+              <h3 style={{ maxWidth: "titleMaxW" in it ? it.titleMaxW : undefined }} className="mx-auto text-[20px] font-medium leading-[24px] tracking-[-0.4px] text-[#111827]">{it.title}</h3>
+              <p className="mt-2 text-[14px] leading-[21px] tracking-[0.3px] text-[#6B7280]">{it.body}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
-

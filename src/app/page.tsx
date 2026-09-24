@@ -6,23 +6,17 @@ import BuildWithEvidence from "@/components/landing/BuildWithEvidence";
 import CTABanner from "@/components/landing/CTABanner";
 import Footer from "@/components/landing/Footer";
 
-export const metadata = {
-  title: "Tiqra – Validate your idea before building it",
-  description:
-    "AI-powered validation using real human insights, helping you make smarter decisions without the guesswork. Join 200+ founders on Tiqra.",
-};
-
 export default function HomePage() {
   return (
-    <div className="overflow-x-hidden min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <main>
         <HeroSection />
         <HowItWorks />
         <FeaturesSection />
         <BuildWithEvidence />
-        <CTABanner />
       </main>
+      <CTABanner />
       <Footer />
     </div>
   );
